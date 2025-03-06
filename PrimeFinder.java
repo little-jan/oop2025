@@ -19,8 +19,19 @@ public class PrimeFinder {
             return true;
         }
     }
+    public static int countPrimes(int start, int end) {
+        int count = 0;
+        for (int value = start; value < end; value++){
+            boolean outcome = isPrime(value);
+            if (outcome) {
+                count++;
+            }
+        }
+        return count;
+    }
+
     public static void main(String[] args) {
-        boolean result = isPrime(24);
-        System.out.println(result);
+        int counting = countPrimes(1, 204);
+        System.out.println(counting);
     }
 }
